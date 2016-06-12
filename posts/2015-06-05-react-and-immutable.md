@@ -1,10 +1,11 @@
 ---
-layout: post
-title: Immutable State and React
-description: "Immutable.js keeping a wonderful state for React"
-tags: [javascript, react, immutable, state]
-comments: false
----
+title: "Immutable State and React"
+date: 2015-03-23 19:40:00 GMT
+tags: javascript, react, immutable, state
+slug: react-and-immutable
+scripts:
+	- "//assets.codepen.io/assets/embed/ei.js"
+...
 
 Over the past six months I've had the opportunity, nay, the privilege, nay, the honor to work with reactjs.  This library is growing in popularity at an astounding rate.  My current employer was both smart and lucky to have chosen this library as the ground work for its front end architecture and I consider myself blessed to be apart of its development process.
 
@@ -22,7 +23,7 @@ Here is where we introduce [Immutable.js](https://facebook.github.io/immutable-j
 
 Here is a diagram of a react app structure that I've used many times. Simple, clean, top down approach.
 
-![Top down React app](/images/reactApp.png "Top down React App")
+![Top down React app](/assets/reactApp.png "Top down React App")
 
 Store app state in a top level "view" component that passes its state down as props to subcomponents that handle data display and interaction. The interaction(updating) happens by passing functions down as props. These functions get called by the sub components with updated data that gets merged into the state that in turn gets passed down again as props.
 
