@@ -1,10 +1,13 @@
 ---
-layout: post
-title: Angular Login Directive
+title: "Angular Login Directive"
 description: "Self contained, simple, straightforward, easy, and etc... angular login directive..."
-tags: [javascript, angular, login, directive]
-comments: false
----
+date: 2014-11-02 12:00:00 GMT
+tags: javascript, angular, login, directive
+slug: angular-login-directive
+scripts:
+ - "//codepen.io/assets/embed/ei.js"
+ - "//gist.github.com/hartzis/d97942f48c0da504c982.js"
+...
 
 This directive was created to simply handle an initial login screen. It allows us to download angular js from a cdn, to have it available before the client reaches the app.
 
@@ -13,7 +16,6 @@ This directive was created to simply handle an initial login screen. It allows u
 ## Angular Directive Power
 
 Using an angular directive for login helps with validating the users ability to consume the actual angular application.  I'd like to eventually have some sort of check that if it didn't load, kindly let the user know that they need to use an updated browser.
-
 
 ### Codepen
 
@@ -27,4 +29,4 @@ I've been enjoying the usefulness of codepen, and now have begun to realize its 
 
 
 ## Angular Login Directive Gist
-{% gist hartzis/d97942f48c0da504c982 %}
+<script src="https://gist.github.com/hartzis/d97942f48c0da504c982.js"></script>

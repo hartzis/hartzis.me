@@ -1,10 +1,11 @@
 ---
 title: "Immutable State and React"
-date: 2015-03-23 19:40:00 GMT
+description: "Immutable.js keeping a wonderful state for React"
+date: 2015-06-05 12:00:00 GMT
 tags: javascript, react, immutable, state
 slug: react-and-immutable
 scripts:
-	- "//assets.codepen.io/assets/embed/ei.js"
+ - "//assets.codepen.io/assets/embed/ei.js"
 ...
 
 Over the past six months I've had the opportunity, nay, the privilege, nay, the honor to work with reactjs.  This library is growing in popularity at an astounding rate.  My current employer was both smart and lucky to have chosen this library as the ground work for its front end architecture and I consider myself blessed to be apart of its development process.

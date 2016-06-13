@@ -1,10 +1,13 @@
 ---
-layout: post
-title: Dynamic Password Validation
+title: "Dynamic Password Validation"
 description: "Nifty jquery password validation modified from stack exchange logic"
-tags: [javascript, jquery, forms]
-comments: false
----
+date: 2014-10-02 12:00:00 GMT
+tags: javascript, jquery, forms
+slug: jquery-password-validation
+scripts:
+ - "//codepen.io/assets/embed/ei.js"
+ - "//gist.github.com/hartzis/6ae1980d3e90faf2c969.js"
+...
 
 Password validation based on specific security parameters was the task at hand. I wanted instant validation as the user typed their password in. These were the specifications that the user needed to meet.
 
@@ -35,4 +38,4 @@ Enter the amazing code playground that is Codepen.io! I built the following code
 ps... Please introduce code completion on codepen.io
 
 ## Password validation Gist
-{% gist hartzis/6ae1980d3e90faf2c969 %}
+<script src="https://gist.github.com/hartzis/6ae1980d3e90faf2c969.js"></script>

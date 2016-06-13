@@ -1,10 +1,15 @@
 ---
-layout: post
-title: Upload Image File Component Fun
+title: "Upload Image File Component Fun"
 description: "Upload images to express server with react"
-tags: [javascript, react, xhr, ajax, express]
-comments: false
----
+date: 2015-07-13 12:00:00 GMT
+tags: javascript, react, xhr, ajax, express
+slug: react-image-upload
+scripts:
+ - "//assets.codepen.io/assets/embed/ei.js"
+ - "//gist.github.com/hartzis/0b77920380736f98e4f9.js"
+ - "//gist.github.com/hartzis/093173bb0b82eaafa73b.js"
+ - "//gist.github.com/hartzis/fb43721affdf9acd8555.js"
+...
 
 I'm currently building a couple little apps to digest, catalog, and display heel clicking's from my worldly adventures.  
 

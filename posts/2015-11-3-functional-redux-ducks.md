@@ -1,10 +1,12 @@
 ---
-layout: post
-title: Functional Redux Ducks
-description: "Functional programming fun with Redux "
-tags: [javascript, react, redux, functional]
-comments: false
----
+title: "Functional Redux Ducks"
+description: "Functional programming fun with Redux"
+date: 2015-11-03 12:00:00 GMT
+tags: javascript, react, redux, functional
+slug: functional-redux-ducks
+scripts:
+ - "//gist.github.com/hartzis/469416bd0ac506896e9c.js"
+...
 
 Recently I've been grasping at and learning more and more about functional programming. React has helped me quite a bit in this venture, but more recently [Redux](https://github.com/rackt/redux) has come into my life and I've truly been enjoying developing with it.
 

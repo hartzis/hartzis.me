@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Respond to the React  
+title: "Respond to the React"
 description: "Learning my third-ish javascript framework in under a year, me likee!"
-tags: [javascript, react, jsx, jest, socket, testing]
-comments: false
----
+date: 2015-01-15 12:00:00 GMT
+tags: javascript, react, jsx, jest, socket, testing
+slug: respond-to-the-react
+...
 
 This is my third javascript framework I have begun to learn in under a year since graduating from [RefatorU](www.refactoru.com). Started the roller coaster with Angular, then traversed Backbone w/JQuery, and now the V(iew) that is [Reactjs](https://facebook.github.io/react/)!
 
@@ -18,7 +18,7 @@ I have definitely grown to exuberantly embrace jsx file format and react compone
 
 ### Small example component from a todo app
 
-{% highlight javascript %}
+```
 var TodoApp = React.createClass({
   getInitialState: function() {
     return {items: [], text: ''};
@@ -44,7 +44,7 @@ var TodoApp = React.createClass({
       </div>
   );}
 });
-{% endhighlight %}
+```
 
 - Small, contained piece of code that has everything right there
 - You get HTML and other custom components as tags(think directives/web components)
@@ -73,14 +73,14 @@ This app is also [isomorphically](http://blog.risingstack.com/from-angularjs-to-
 
 ### Example rendering html server side with React
 
-{% highlight javascript %}
+```
 // Render React to a string, passing in current todos
 var markup = React.renderToString(
   TodoApp({
     todos: todos
   })
 );
-{% endhighlight %}
+```
 
 You then inject the generated markup where it needs to go in your template being sent from the server and boom!
 

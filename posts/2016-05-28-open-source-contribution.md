@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Open Source - contribute too
+title: "Open Source - contribute too"
 description: "Open Source coding is awesome and you too should contribute"
-tags: [javascript, open source, react]
-comments: false
----
+date: 2016-05-28 12:00:00 GMT
+tags: javascript, open source, react
+slug: open-source-contribution
+...
 
 I started my developing adventures in javascript and front end development a little over two years ago, and before javascript I enjoyed scripting with python. While using both of these languages I've benefited tremendously from open source technologies, specifically [GDAL](https://pypi.python.org/pypi/GDAL/) with python and [react](http://facebook.github.io/react/) with [redux](http://redux.js.org/).
 

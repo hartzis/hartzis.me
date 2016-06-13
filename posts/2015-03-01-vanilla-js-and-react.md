@@ -1,10 +1,10 @@
 ---
-layout: post
-title: Tasty Vanilla JS and React
+title: "Tasty Vanilla JS and React"
 description: "Enjoying more javascript fun with the help of React"
-tags: [javascript, react, jsx]
-comments: false
----
+date: 2015-03-01 12:00:00 GMT
+tags: javascript, react, jsx
+slug: vanilla-js-and-react
+...
 
 I'm always trying to improve my base javascript understanding and programming abilities. React helps with this task by letting me focus more on the "business logic" and less on the DOM manipulation.
 
@@ -23,7 +23,7 @@ Below is a small cart example written with React. It was one of my first react a
 - "vanilla js" jsonP service request for data
 
 ### Example jsonP request from React-cart
-{% highlight javascript %}
+```
 
 AppService.getGramsByQuery = function(query, passedInCallback) {
 
@@ -49,6 +49,6 @@ AppService.getGramsByQuery = function(query, passedInCallback) {
 
 }
 
-{% endhighlight %}
+```
 
 I've been able to learn many fun and delicious javascript goodies over the past few months, and I attribute a lot that to React
