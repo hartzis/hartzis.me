@@ -2,23 +2,26 @@ import React, { Component } from 'react'
 import Header from './header'
 import Post from './post'
 import Home from './home'
-import Blog from './blog'
+import Posts from './posts'
 import FourOhFour from './404'
 
 export default class Index extends Component {
   render () {
-    const { posts, url } = this.props
-
+    const { posts, url, query } = this.props
+    console.log(this.props)
     let page
-    let headerHeight = 'short'
 
     if (!url || url === '/') {
-      headerHeight = 'full'
       page = <Home posts={posts.slice(0, 5)}/>
     }
 
-    if (!page && url === '/blog/all') {
-      page = <Blog posts={posts}/>
+    if (!page && url === '/posts') {
+      let tag
+      if (query) {
+        let split = query.split('=');
+        tag = split[0] === 'tag' ? split[1] : '';
+      }
+      page = <Posts posts={posts} tag={tag}/>
     }
 
     if (!page && url === '/404') {
@@ -34,7 +37,7 @@ export default class Index extends Component {
 
     return (
       <div>
-        <Header height={headerHeight}/>
+        <Header />
         <main>
           {page}
         </main>

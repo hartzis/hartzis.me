@@ -20,7 +20,7 @@ export default class Home extends Component {
         })}
 
         <footer>
-          <a href='/blog/all'>list of all posts</a>
+          <a href='/posts'>all posts</a>
         </footer>
       </section>
     )

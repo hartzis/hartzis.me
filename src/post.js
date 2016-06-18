@@ -14,12 +14,15 @@ export default class Post extends Component {
     let tags
 
     if (post.tags) {
+      let linkedTags = post.tags.split(',').map(t=>t.trim()).map(t=>(
+        <a href={`/posts?tag=${t}`}>{t}</a>
+      ))
       tags = (
-        <span> | <span className='name'>tagged: {post.tags}</span></span>
+        <span> | <span className='tags'>tagged: {linkedTags}</span></span>
       )
     }
 
-    let twitterUrl = `http://www.twitter.com/share?url=${post.url}&amp;text=${post.title}`
+    let twitterUrl = `http://www.twitter.com/share?url=http://hartzis.me${post.url}&amp;text=${post.title}`
 
     let date = post.last_updated || post.date
 
@@ -36,13 +39,12 @@ export default class Post extends Component {
         <section dangerouslySetInnerHTML={{__html: post.html}}></section>
         <footer>
           <hr/>
-          <h4>Thanks for reading, you may want to:</h4>
+          <h4>Thanks taking the time to gander at my electronic writings, please:</h4>
           <ul>
-            <li><a href='http://twitter.com/henrikjoreteg'>follow me on twitter</a></li>
-            <li><a href='http://consulting.joreteg.com'>read about my consulting services</a></li>
-            <li><a href='http://read.humanjavascript.com'>check out my book</a></li>
-            <li><a href='/blog/all'>see my other posts</a></li>
-            <li><a href='https://gumroad.com/henrikjoreteg/follow'>get an email when I ship new stuff</a></li>
+            <li><a href={twitterUrl}>share this on the twitter</a></li>
+            <li><a href='http://twitter.com/hartzis'>follow me on the twitter</a></li>
+            <li><a href='http://github.com/hartzis'>check out what I've been coding</a></li>
+            <li><a href='/posts'>see my other posts</a></li>
           </ul>
         </footer>
       </article>

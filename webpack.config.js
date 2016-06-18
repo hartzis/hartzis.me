@@ -3,17 +3,26 @@ var webpackConfig = require('hjs-webpack')
 var data = require('./data.json')
 var fs = require('fs')
 
-function renderScripts (scripts) {
-  scripts || (scripts = [])
+function renderScripts (scripts = []) {
   return scripts.map(function (url) {
     return '<script src="' + url + '"></script>'
   }).join('')
 }
 
-var analytics = '<script>!function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];d.src=\'//d1l6p2sc9645hc.cloudfront.net/tracker.js\';q.parentNode.insertBefore(d,q)}(window,document,\'script\',\'_gs\');_gs(\'GSN-892886-O\');</script>'
+var analytics = `
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52253751-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+`
 
 var links = [
-  '<link rel="alternate" type="application/rss+xml" href="https://joreteg.com/rss">',
   '<link rel="apple-touch-icon-precomposed" href="/avatar.png">',
   '<link rel="shortcut icon" href="/avatar.png">'
 ].join('')
@@ -31,17 +40,32 @@ var loaderConfig = webpackConfig({
     function render (el, title, scripts) {
       var contentHtml = ReactDOMServer.renderToStaticMarkup(el)
       scripts = renderScripts(scripts)
-      title || (title = 'Henrik Joreteg\'s Blog')
-      return '<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>' + title + '</title><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/><link href="/' + context.css + '" rel="stylesheet"/>' + links + '</head><body><div id="root">' + contentHtml + '</div>' + scripts + analytics + '</body></html>'
+      title || (title = 'Brian Emil Hartz is.Me')
+      return `
+        <!doctype html><html lang="en">
+          <head>
+            <meta charset="utf-8"/>
+            <title>${title}</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+            <link href="/${context.css}" rel="stylesheet"/>
+            <link rel="canonical" href="http://www.hartzis.me/">
+            ${links}
+          </head>
+          <body>
+            <div id="root">${contentHtml}</div>
+            ${scripts}${analytics}
+          </body>
+        </html>
+      `
     }
 
     var result = {
       'index.html': render(React.createElement(App, {url: '/', posts: data.posts})),
       '404.html': render(React.createElement(App, {url: '/404', posts: data.posts}), '404 - Not found'),
-      'blog/all.html': render(React.createElement(App, {url: '/blog/all', posts: data.posts}), 'Henrik\'s Blog, all posts')
+      'posts/index.html': render(React.createElement(App, {url: '/posts', posts: data.posts}), 'All Posts – Hartzis.Me')
     }
 
-    data.posts.forEach(function (post, index) {
+    data.posts.forEach(function (post) {
       result[post.outputFile] = render(React.createElement(App, {url: post.url, posts: data.posts}), post.title, post.scripts)
     })
     return result

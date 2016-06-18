@@ -4,8 +4,8 @@ export default class FourOhFour extends Component {
   render () {
     return (
       <section>
-        <h1>404, so sad</h1>
-        <p>Maybe try the <a href='/blog/all'>list of all posts</a> or just <a href='/'>go home</a>.</p>
+        <h1>404, meh</h1>
+        <p>Take a look at <a href='/posts'>all posts</a> or <a href='/'>home</a>.</p>
       </section>
     )
   }
