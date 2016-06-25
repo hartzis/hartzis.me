@@ -4,10 +4,6 @@ description: "Test react components with shallow rendering"
 date: 2015-12-26 12:00:00 GMT
 tags: javascript, react, testing
 slug: react-testing
-scripts:
- - "//gist.github.com/hartzis/b1ed6d811e6948b293b9.js"
- - "//gist.github.com/hartzis/d9c5f448eecdf3475d48.js"
- - "//gist.github.com/hartzis/e5f889cc4b0c75849ba8.js"
 ...
 
 With react v0.13 they introduced 'shallow rendering', all basic html inside a component is rendered and no sub components are rendered. We now have the power to run unit tests in node without the need for a 'DOM'.

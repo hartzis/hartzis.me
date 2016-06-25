@@ -4,9 +4,6 @@ description: "Write visualizations with D3js online!"
 date: 2014-05-28 12:00:00 GMT
 tags: d3, javascript, tributary
 slug: tributary-d3
-scripts:
- - "//gist.github.com/hartzis/11292469.js"
- - "//gist.github.com/hartzis/093144225f67c410e515.js"
 ...
 
 I'd like to share what maybe the greatest tool for working with D3js: [tributary.io](http://www.trubutary.io).

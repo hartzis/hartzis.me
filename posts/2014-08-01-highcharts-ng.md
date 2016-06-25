@@ -19,7 +19,7 @@ I have data, data that needs proper representation in the online web-o-sphere! T
 
 [Highcharts-ng](https://github.com/pablojim/highcharts-ng) is a directive itself, it has a lot of boilerplate code that has to be attached to the controller's scope. And that is where another wrapper directive comes in handy that isolates the scope.
 
-![highcharts-ng from client project](/images/highcharts1.png "highcharts-ng from client project")
+![highcharts-ng from client project](/assets/highcharts1.png "highcharts-ng from client project")
 
 ### Directive Template
 

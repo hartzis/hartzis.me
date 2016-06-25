@@ -33,4 +33,3 @@ Store app state in a top level "view" component that passes its state down as pr
 Here is a small codepen example using ES2015, React, and Immutable.js that uses babel.io precompiler.
 
 <p data-height="400" data-theme-id="9092" data-slug-hash="NqwjpN" data-default-tab="result" data-user="hartzis" class='codepen'>See the Pen <a href='http://codepen.io/hartzis/pen/NqwjpN/'>React and Immutable, Top Down</a> by Brian Emil Hartz (<a href='http://codepen.io/hartzis'>@hartzis</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>

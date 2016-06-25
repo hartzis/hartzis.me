@@ -6,9 +6,6 @@ tags: javascript, react, xhr, ajax, express
 slug: react-image-upload
 scripts:
  - "//assets.codepen.io/assets/embed/ei.js"
- - "//gist.github.com/hartzis/0b77920380736f98e4f9.js"
- - "//gist.github.com/hartzis/093173bb0b82eaafa73b.js"
- - "//gist.github.com/hartzis/fb43721affdf9acd8555.js"
 ...
 
 I'm currently building a couple little apps to digest, catalog, and display heel clicking's from my worldly adventures.  
@@ -19,7 +16,6 @@ While building the image processing app I needed to upload the images to an expr
 ## The React File Upload Component
 
 <p data-height="436" data-theme-id="9092" data-slug-hash="VvNGZP" data-default-tab="result" data-user="hartzis" class='codepen'>See the Pen <a href='http://codepen.io/hartzis/pen/VvNGZP/'>React Image Preview & Upload</a> by Brian Emil Hartz (<a href='http://codepen.io/hartzis'>@hartzis</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 <script src="https://gist.github.com/hartzis/0b77920380736f98e4f9.js"></script>
 

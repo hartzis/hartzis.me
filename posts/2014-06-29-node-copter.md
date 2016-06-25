@@ -4,8 +4,6 @@ description: "Team frackin cylons takes on node copter competition"
 date: 2014-06-29 12:00:00 GMT
 tags: node, javascript, uav
 slug: node-copter
-scripts:
- - "//platform.twitter.com/widgets.js"
 ...
 
 Last weekend RefactorU's team 'frackin toasters' programmed an [ar-drone](http://ardrone2.parrot.com/) using [Node.js](http://nodejs.org/).

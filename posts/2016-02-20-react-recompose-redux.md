@@ -4,11 +4,6 @@ description: "Compose/Compute props for [Re]act with [Re]compose and [Re]dux"
 date: 2016-02-20 12:00:00 GMT
 tags: javascript, react, props, compose, recompose, redux
 slug: react-recompose-redux
-scripts:
- - "//gist.github.com/hartzis/696edd6cb1f1d08a9e1d.js"
- - "//gist.github.com/hartzis/b6e9530434885dd8ec6e.js"
- - "//gist.github.com/hartzis/1e6de9c07c0ff7ae7636.js"
- - "//gist.github.com/hartzis/4c6a834e60cb0099edff.js"
 ...
 
 Over the past few months I've been using a library called [recompose](https://github.com/acdlite/recompose). It claims to be 'a react utility belt for function components and higher-order components', and it fulfills this claim exceedingly well!
