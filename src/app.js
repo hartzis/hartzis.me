@@ -3,6 +3,7 @@ import Header from './header'
 import Post from './post'
 import Home from './home'
 import Posts from './posts'
+import About from './about'
 import FourOhFour from './404'
 
 export default class Index extends Component {
@@ -13,6 +14,10 @@ export default class Index extends Component {
 
     if (!url || url === '/') {
       page = <Home posts={posts.slice(0, 5)}/>
+    }
+
+    if (url === '/about') {
+      page = <About />
     }
 
     if (!page && url === '/posts') {
