@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './header'
+import Aside from './aside'
 import Post from './post'
 import Home from './home'
 import Posts from './posts'
@@ -43,9 +44,12 @@ export default class Index extends Component {
     return (
       <div>
         <Header />
-        <main>
-          {page}
-        </main>
+        <div className="layout">
+          <Aside />
+          <main>
+            {page}
+          </main>
+        </div>
       </div>
     )
   }

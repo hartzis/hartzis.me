@@ -12,7 +12,7 @@ body
   line-height: 1.5
   color: $black
   text-rendering: optimizeSpeed
-  padding-bottom: 80px
+  padding-bottom: 5.5rem
 
 a
   color: $blue
@@ -23,7 +23,18 @@ ul ul
 ul ul li
   list-style-type: disc
 
-main
-  padding: 1rem
-  max-width: 600px
-  margin: auto
+.layout
+  display: -webkit-flex;
+  display: flex;
+
+  aside
+    padding-left: 1rem
+
+  main
+    padding: 1rem
+    max-width: 38rem
+    margin: auto
+
+@media all and (max-width: 50rem)
+  .layout
+    flex-direction: column

@@ -1,0 +1,32 @@
+.gravatar
+  img
+    border-radius: 50%
+
+.social
+  display: flex
+  flex-direction: column
+
+  .icon
+    vertical-align: middle
+    height: 1.5rem
+    fill: #aaa
+
+  a
+    margin: .75rem
+    text-decoration: none
+    line-height: 2rem
+
+@media all and (max-width: 50rem)
+  .social
+    justify-content: flex-start
+    flex-direction: row
+
+  .linkText
+    display: none
+
+  div:first-child
+    a
+      padding-left: 0
+
+  .gravatar
+    display: none
