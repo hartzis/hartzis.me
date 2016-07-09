@@ -63,6 +63,7 @@ var loaderConfig = webpackConfig({
     var result = {
       'index.html': render(React.createElement(App, {url: '/', posts: data.posts})),
       '404.html': render(React.createElement(App, {url: '/404', posts: data.posts}), '404 - Not found'),
+      'about/index.html': render(React.createElement(App, {url: '/about'})),
       'posts/index.html': render(React.createElement(App, {url: '/posts', posts: data.posts}), 'All Posts – Hartzis.Me')
     }
 

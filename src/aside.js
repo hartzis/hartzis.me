@@ -19,7 +19,7 @@ function Codepen() {
 export default class Aside extends Component {
   render () {
     return (
-      <aside>
+      <aside className="theAside">
         <div className="gravatar">
           <img src={this.props.gravatarSrc}/>
         </div>
