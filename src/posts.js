@@ -4,7 +4,7 @@ import moment from 'moment'
 export default class Posts extends Component {
   render () {
     const { posts, tag } = this.props
-    console.log(this.props)
+    // console.log(this.props)
     let filteredPosts = tag
       ? posts.filter(post=>(post.tags && post.tags.split(',').map(a=>a.trim()) || []).find(t=>t===tag))
       : posts

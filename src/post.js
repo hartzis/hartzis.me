@@ -15,10 +15,10 @@ export default class Post extends Component {
 
     if (post.tags) {
       let linkedTags = post.tags.split(',').map(t=>t.trim()).map(t=>(
-        <a href={`/posts?tag=${t}`}>{t}</a>
+        <a key={t} href={`/posts?tag=${t}`}>{t}</a>
       ))
       tags = (
-        <span> | <span className='tags'>tagged: {linkedTags}</span></span>
+        <span> | <span className='tags'>tagged:&nbsp;{linkedTags}</span></span>
       )
     }
 

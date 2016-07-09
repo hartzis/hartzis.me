@@ -9,7 +9,7 @@ export default class Header extends Component {
           <img src={this.props.imageUrl}/>
         </div>
         <h2><a href="/">{this.props.title}</a></h2>
-        <p>{this.props.subtitle}</p>
+        <p>let me = enjoy&nbsp;(&nbsp;javascript&nbsp;(&nbsp;reactjs&nbsp;(&nbsp;pondering&nbsp;)&nbsp;)&nbsp;)</p>
       </header>
     )
   }
@@ -17,6 +17,6 @@ export default class Header extends Component {
 
 Header.defaultProps = {
   title: 'Brian Emil Hartz',
-  subtitle: `let me = enjoy ( javascript ( reactjs ( pondering ) ) )`,
-  imageUrl: 'http://www.hartzis.me/images/rsz_hartzis-main-feature.jpg',
+  // subtitle: `let me = enjoy ( javascript ( reactjs ( pondering ) ) )`,
+  imageUrl: '/assets/rsz_hartzis-main-feature.jpg',
 }

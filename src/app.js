@@ -10,7 +10,7 @@ import FourOhFour from './404'
 export default class Index extends Component {
   render () {
     const { posts, url, query } = this.props
-    console.log(this.props)
+    // console.log(this.props)
     let page
 
     if (!url || url === '/') {

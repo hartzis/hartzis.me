@@ -1,21 +1,21 @@
 header
   h2
-    font-size: 32px
-    padding-left: 20px
-    margin-top: -51px
+    font-size: 2rem
+    padding-left: 1.25rem
+    margin-top: -3rem
 
     a
       color: white
       text-decoration: none
 
   p
-    padding-left: 20px
-    margin-top: -20px
-    font-size: 16px
+    padding-left: 1.25rem
+    margin-top: -1.25rem
+    font-size: 1rem
 
     &:first-of-type
       color: #aaa
-      margin-top: -30px
+      margin-top: -2rem
 
   div
     width: 100%
@@ -25,3 +25,8 @@ header
       width: 100%
       height: auto
       border: 1px solid black
+
+@media all and (max-width: 50rem)
+  header
+    p
+      font-size: .75rem

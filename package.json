@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "hjs-dev-server",
-    "build": "webpack",
-    "getdata": "node ./node_modules/babel-cli/lib/babel-node.js lib/extract-data"
+    "build": "webpack && cp -r assets public && cp CNAME public",
+    "getdata": "node ./node_modules/babel-cli/lib/babel-node.js lib/extract-data",
+    "deploy": "surge -p public"
   },
   "author": "Henrik Joreteg <henrik@joreteg.com>",
   "contributors": [
@@ -52,6 +53,7 @@
     "yeticss": "^7.0.5"
   },
   "devDependencies": {
-    "babel-cli": "^6.7.7"
+    "babel-cli": "^6.7.7",
+    "surge": "^0.18.0"
   }
 }

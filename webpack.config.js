@@ -23,8 +23,9 @@ var analytics = `
 `
 
 var links = [
-  '<link rel="apple-touch-icon-precomposed" href="/avatar.png">',
-  '<link rel="shortcut icon" href="/avatar.png">'
+  // '<link rel="apple-touch-icon-precomposed" href="/avatar.png">',
+  // '<link rel="shortcut icon" href="/avatar.png">',
+  '<link rel="shortcut icon" href="assets/favicon.ico">'
 ].join('')
 
 var loaderConfig = webpackConfig({

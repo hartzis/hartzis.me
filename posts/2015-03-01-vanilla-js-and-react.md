@@ -12,7 +12,7 @@ I'm always trying to improve my base javascript understanding and programming ab
 
 > React lets you focus more on pure javascript and not the DOM.
 
-Below is a small cart example written with React. It was one of my first react app creations. It simply searches <del>instagram</del> flicker for a search query of images, and lets you add them to a "cart".
+Below is a small cart example written with React. It was one of my first react app creations. It simply searches flicker, not instagram, for a search query of images, and lets you add them to a "cart".
 
 [React-cart Example](http://www.hartzis.me/react-gram-cart)  
 
