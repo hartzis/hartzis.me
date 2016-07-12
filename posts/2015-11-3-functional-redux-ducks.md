@@ -18,7 +18,7 @@ I was instantly hooked since we had recently been internally working on a state 
 
 The first day I started learning about redux I also created [shop ducks with redux](https://github.com/hartzis/react-with-redux-shop-ducks). This has since become my playground for trying new things related to react and redux, like [redux-form](https://github.com/erikras/redux-form).
 
-* Checkout the ['Shopping for ducks with redux' - live working version](http://www.hartzis.me/react-with-redux-shop-ducks/)
+* Checkout the ['Shopping for ducks with redux' - live working version](http://hartzis.github.io/react-with-redux-shop-ducks/)
 
 ## Stateless functional components
 

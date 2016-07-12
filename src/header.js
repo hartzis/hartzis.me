@@ -9,7 +9,7 @@ export default class Header extends Component {
           <img src={this.props.imageUrl}/>
         </div>
         <h2><a href="/">{this.props.title}</a></h2>
-        <p>let me = enjoy&nbsp;(&nbsp;javascript&nbsp;(&nbsp;reactjs&nbsp;(&nbsp;pondering&nbsp;)&nbsp;)&nbsp;)</p>
+        <p>let me = enjoy&nbsp;(&nbsp;pondering&nbsp;(&nbsp;javascript&nbsp;(&nbsp;reactjs&nbsp;)&nbsp;)&nbsp;)</p>
       </header>
     )
   }
