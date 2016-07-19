@@ -2,7 +2,7 @@
 title: "Functional Redux Ducks"
 description: "Functional programming fun with Redux"
 date: 2015-11-03 12:00:00 GMT
-tags: javascript, react, redux, functional
+tags: javascript, react, redux, functional, HOC
 slug: functional-redux-ducks
 ...
 

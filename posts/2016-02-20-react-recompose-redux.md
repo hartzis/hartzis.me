@@ -2,7 +2,7 @@
 title: "React with Recompose with Redux"
 description: "Compose/Compute props for [Re]act with [Re]compose and [Re]dux"
 date: 2016-02-20 12:00:00 GMT
-tags: javascript, react, props, compose, recompose, redux
+tags: javascript, react, props, compose, recompose, redux, HOC
 slug: react-recompose-redux
 ...
 
