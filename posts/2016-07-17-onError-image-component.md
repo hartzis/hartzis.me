@@ -16,3 +16,5 @@ I tweeted the other day about image onError react component. The below tweet and
 But I'd like to create one that has some self contained state that updates based `onError` and uses [recompose](https://github.com/acdlite/recompose)!
 
 The below component uses recompose to hold image state, add onError callbacks, and attach lifecycle methods. I also feel it adds easy to reason about flow and good separation of concerns to create an overall strong reusable image component.
+
+<script src="https://gist.github.com/hartzis/9b23d09f2c98019ddcf452f6916f09aa.js"></script>
