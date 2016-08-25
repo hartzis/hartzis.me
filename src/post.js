@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import loadScript from 'load-script'
 import moment from 'moment'
 
 export default class Post extends Component {
@@ -7,15 +6,11 @@ export default class Post extends Component {
   render () {
     const { post } = this.props
 
-    if (post.scripts && post.scripts.length && typeof document !== 'undefined') {
-      post.scripts.forEach(url => loadScript(url))
-    }
-
     let tags
 
     if (post.tags) {
       let linkedTags = post.tags.split(',').map(t=>t.trim()).map(t=>(
-        <span key={t}><a href={`/posts?tag=${t}`}>{t}</a> </span>
+        <span key={t}><a href={`/posts/?tag=${t}`}>{t}</a> </span>
       ))
       tags = (
         <span className='tags'>tagged: {linkedTags}</span>
@@ -44,7 +39,7 @@ export default class Post extends Component {
             <li><a href={twitterUrl}>share this on the twitter</a></li>
             <li><a href='http://twitter.com/hartzis'>follow me on the twitter</a></li>
             <li><a href='http://github.com/hartzis'>check out what I've been coding</a></li>
-            <li><a href='/posts'>see my other posts</a></li>
+            <li><a href='/posts/'>see my other posts</a></li>
           </ul>
         </footer>
       </article>

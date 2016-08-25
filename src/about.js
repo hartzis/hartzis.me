@@ -21,7 +21,7 @@ export default class Home extends Component {
           <ul>
             <li><a href='http://twitter.com/hartzis'>follow me on the twitter</a></li>
             <li><a href='http://github.com/hartzis'>check out what I've been coding</a></li>
-            <li><a href='/posts'>see my other posts</a></li>
+            <li><a href='/posts/'>see my other posts</a></li>
           </ul>
         </footer>
       </article>

@@ -1,11 +1,16 @@
 // make it possible to require es6 modules
+var webpack = require('webpack')
 var webpackConfig = require('hjs-webpack')
 var data = require('./data.json')
 var fs = require('fs')
 
+function renderScript(url) {
+  return '<script async src="' + url + '"></script>'
+}
+
 function renderScripts (scripts = []) {
   return scripts.map(function (url) {
-    return '<script src="' + url + '"></script>'
+    return renderScript(url)
   }).join('')
 }
 
@@ -38,7 +43,7 @@ var loaderConfig = webpackConfig({
     var ReactDOMServer = require('react-dom/server')
     var React = require('react')
     var App = require('./src/app').default
-    function render (el, title, scripts) {
+    function render ({el, title, scripts, loadJS}) {
       var contentHtml = ReactDOMServer.renderToStaticMarkup(el)
       scripts = renderScripts(scripts)
       title || (title = 'Brian Emil Hartz is.Me')
@@ -54,21 +59,22 @@ var loaderConfig = webpackConfig({
           </head>
           <body>
             <div id="root">${contentHtml}</div>
-            ${scripts}${analytics}
+            ${scripts}${analytics}${loadJS?renderScript('/'+context.main):''}
           </body>
         </html>
       `
     }
 
     var result = {
-      'index.html': render(React.createElement(App, {url: '/', posts: data.posts})),
-      '404.html': render(React.createElement(App, {url: '/404', posts: data.posts}), '404 - Not found'),
-      'about/index.html': render(React.createElement(App, {url: '/about'})),
-      'posts/index.html': render(React.createElement(App, {url: '/posts', posts: data.posts}), 'All Posts – Hartzis.Me')
+      'index.html': render({el: React.createElement(App, {url: '/', posts: data.posts})}),
+      '404.html': render({el: React.createElement(App, {url: '/404', posts: data.posts}), title: '404 - Not found'}),
+      'about/index.html': render({el: React.createElement(App, {url: '/about/'})}),
+      // load the js on this page so we can use the query param :)
+      'posts/index.html': render({el: React.createElement(App, {url: '/posts/', posts: data.posts}), title: 'All Posts – Hartzis.Me', loadJS: true})
     }
 
-    data.posts.forEach(function (post) {
-      result[post.outputFile] = render(React.createElement(App, {url: post.url, posts: data.posts}), post.title, post.scripts)
+    data.posts.forEach(function ({outputFile, url, title, scripts}) {
+      result[outputFile] = render({el: React.createElement(App, {url, posts: data.posts}), title, scripts})
     })
     return result
   }
@@ -79,5 +85,15 @@ var loaderConfig = webpackConfig({
 // const babelrc = JSON.parse(fs.readFileSync('./.babelrc'))
 // babelrc.env = {development: {presets: ['react-hmre']}}
 // config.module.loaders[0].query = babelrc
+
+// loaderConfig.plugins.push(
+//   new webpack.DefinePlugin({
+//     'process.env': {
+//       'NODE_ENV': JSON.stringify('production')
+//     }
+//   })
+// )
+
+// console.log(loaderConfig);
 
 module.exports = loaderConfig;

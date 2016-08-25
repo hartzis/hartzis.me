@@ -24,8 +24,8 @@ export default class Aside extends Component {
           <img src={this.props.gravatarSrc}/>
         </div>
         <div className="social">
-          <div><a href='/about'>about&nbsp;me</a></div>
-          <div><a href='/posts'>all&nbsp;posts</a></div>
+          <div><a href='/about/'>about&nbsp;me</a></div>
+          <div><a href='/posts/'>all&nbsp;posts</a></div>
           <div><a href='http://github.com/hartzis'><Github/><span className="linkText">github</span></a></div>
           <div><a href='http://twitter.com/hartzis'><Twitter/><span className="linkText">twitter</span></a></div>
           <div><a href='http://codepen.io/hartzis'><Codepen/><span className="linkText">codepen</span></a></div>

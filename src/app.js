@@ -9,7 +9,7 @@ import FourOhFour from './404'
 
 export default class Index extends Component {
   render () {
-    const { posts, url, query } = this.props
+    const { posts = [], url, query } = this.props
     // console.log(this.props)
     let page
 
@@ -17,11 +17,11 @@ export default class Index extends Component {
       page = <Home posts={posts.slice(0, 5)}/>
     }
 
-    if (url === '/about') {
+    if (url === '/about/') {
       page = <About />
     }
 
-    if (!page && url === '/posts') {
+    if (!page && url === '/posts/') {
       let tag
       if (query) {
         let split = query.split('=');
@@ -30,15 +30,16 @@ export default class Index extends Component {
       page = <Posts posts={posts} tag={tag}/>
     }
 
-    if (!page && url === '/404') {
-      page = <FourOhFour />
-    }
-
     if (!page) {
       const found = posts.find(post => post.url === url)
       if (found) {
         page = <Post post={found}/>
       }
+    }
+
+    // catch everything else
+    if (!page || url === '/404') {
+      page = <FourOhFour />
     }
 
     return (
