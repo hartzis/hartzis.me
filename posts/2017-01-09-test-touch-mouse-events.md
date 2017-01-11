@@ -13,3 +13,7 @@ When I first wrote that post I looked into [Jest](https://facebook.github.io/jes
 > Jest snapshot testing is amazing for testing react components
 
 I've had an [issue](https://github.com/dogfessional/react-swipeable/issues/18) open on [react-swipeable](https://github.com/dogfessional/react-swipeable/) for over a year that has a task to create tests. I [recently undertook](https://github.com/dogfessional/react-swipeable/pull/59) this adventure and am going to briefly discuss creating touch and mouse event tests using Jest and enzyme.
+
+### Testing Setup
+
+First install all required deps by following the general setup on [Jest's page](https://facebook.github.io/jest/docs/tutorial-react.html) and since we're doing 'DOM testing' you want to install enzyme and react-addons-test-utils by following [this example](https://facebook.github.io/jest/docs/tutorial-react.html#dom-testing).
