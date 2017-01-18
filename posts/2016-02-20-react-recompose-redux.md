@@ -6,7 +6,7 @@ tags: javascript, react, props, compose, recompose, redux, HOC
 slug: react-recompose-redux
 ...
 
-Over the past few months I've been using a library called [recompose](https://github.com/acdlite/recompose). It claims to be 'a react utility belt for function components and higher-order components', and it fulfills this claim exceedingly well!
+Over the past few months I've been using a library called [recompose](https://github.com/acdlite/recompose). It claims to be `a react utility belt for function components and higher-order components`, and it fulfills this claim exceedingly well!
 
 I've [previously](/functional-redux-ducks) talked about [stateless functional components](http://facebook.github.io/react/blog/2015/10/07/react-v0.14.html#stateless-functional-components) and how they have helped keep components small and more reusable. Functional components really shine with the help of [recompose](https://github.com/acdlite/recompose)! I've been able to extract computed properties, display logic, and overall optimize my code and views!
 
