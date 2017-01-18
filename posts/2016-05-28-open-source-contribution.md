@@ -8,7 +8,7 @@ slug: open-source-contribution
 
 I started my developing adventures in javascript and front end development a little over two years ago, and before javascript I enjoyed scripting with python. While using both of these languages I've benefited tremendously from open source technologies, specifically [GDAL](https://pypi.python.org/pypi/GDAL/) with python and [react](http://facebook.github.io/react/) with [redux](http://redux.js.org/).
 
-Open source projects have had and continue to have a dramatic and profound effected on my career and life. A great example is the community around [react](http://facebook.github.io/react/). It is so helpful, encouraging, and positive.
+Open source projects have had and continue to have a dramatic and profound affect on my career and life. A great example is the community around [react](http://facebook.github.io/react/). It is so helpful, encouraging, and positive.
 
 ## Contributing to open source
 
@@ -24,6 +24,6 @@ I was able to [contribute](https://github.com/reactjs/redux/commits?author=hartz
 
 I can attest that open source contributing is fun, fulfilling, and actually not too hard to do. Many open source maintainers need almost any help they can get, and a great way to get started is just helping with documentation! I encourage all entry level devs to attempt to contribute back to their communities.
 
-Most of my posts are fairly small and with this post I just wanted to lightly touch on my personal experience's with open source. It has been an amazing and rewarding journey that I wish to continue even though I am slightly scared of open source fatigue.
+Most of my posts are fairly small and with this post I just wanted to lightly touch on my personal experience with open source. It has been an amazing and rewarding journey that I wish to continue even though I am slightly scared of open source fatigue.
 
 Here's to a bright, open, and knowledge filled sharing future!

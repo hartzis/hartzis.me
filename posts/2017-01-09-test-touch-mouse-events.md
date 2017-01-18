@@ -22,10 +22,14 @@ First install all required deps by following the general setup on [Jest's page](
 
 #### Component
 
+Let's start with a simple component that keeps track of a touch events x axis interaction.
+
 #### Test Utils
 
 #### Tests
 
-#### Full Repl.it Example
+#### Full Example on Github
 
-https://repl.it/languages/jest
+I setup the discussed component and tests in a github repo that can be cloned and ran locally if desired.
+
+[https://github.com/hartzis/event-testing](https://github.com/hartzis/event-testing)
