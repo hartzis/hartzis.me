@@ -1,9 +1,9 @@
 ---
-title: "Touch and Mouse Event React Testing"
-description: "Test react component that handles touch and mouse events"
-date: 2016-02-20 12:00:00 GMT
+title: "Touch Event React Testing"
+description: "Test react component that handles touch events"
+date: 2017-01-09 12:00:00 GMT
 tags: javascript, react, test, touch, mouse, events
-slug: test-touch-mouse-events-react
+slug: test-touch-events-react
 ...
 
 React component testing has dramatically improved over the past year. A year ago I wrote a [small post](http://www.hartzis.me/react-testing/) that used [Enzyme](https://github.com/airbnb/enzyme) which helped supply much needed tooling around react component testing and isolated component testing with [shallow Rendering](https://facebook.github.io/react/docs/test-utils.html#shallow-rendering).
@@ -14,7 +14,7 @@ When I first wrote that post I looked into [Jest](https://facebook.github.io/jes
 
 ## Testing
 
-I've had an [open issue](https://github.com/dogfessional/react-swipeable/issues/18) on [react-swipeable](https://github.com/dogfessional/react-swipeable/) for over a year that has a task to create tests. I [recently undertook](https://github.com/dogfessional/react-swipeable/pull/59) this adventure and am going to go through a creating a simple touch event component with tests that utilize jest and enzyme.
+I've had an [open issue](https://github.com/dogfessional/react-swipeable/issues/18) on `react-swipeable` for over a year that has a task to create tests. I [recently undertook](https://github.com/dogfessional/react-swipeable/pull/59) this adventure and am going to share what I did by going through the creation of a simple touch event component and creating tests that utilize jest and enzyme.
 
 #### Setup
 
@@ -22,17 +22,17 @@ First install all required dependencies by following the general setup on [Jest'
 
 #### Component
 
-Let's start with a simple component that keeps track of a touch event along the x axis.
+Let's start with a simple component that keeps track of `touch events` along the x axis.
 
 <script src="https://gist.github.com/hartzis/b34a4beeb5ceb4bf1ed8659e477c4191.js"></script>
 
-This component will keep track when a `touch event` has started, then tracks if the touch is "swiping" and finally when the touch finishes if the touch is considered a "swipe" (greater than a min distance of `50px`).
+This component will keep track when a `touch event` has started, then tracks if the touch is "swiping" and finally when the touch finishes if the touch is considered a "swipe" - if distance touch travelled is `> this.minDistance`, which is 50px.
 
 #### Test Utils
 
-We need to test our new touch event component using enzyme's [mount](http://airbnb.io/enzyme/docs/api/mount.html). Then we need to simulate touch events via (simulate)[http://airbnb.io/enzyme/docs/api/ReactWrapper/simulate.html] on a selected dom node.
+We will test our new touch event component using enzyme's [mount](http://airbnb.io/enzyme/docs/api/mount.html) component capabilities. Then we need to simulate touch events via [simulate](http://airbnb.io/enzyme/docs/api/ReactWrapper/simulate.html) on a selected dom node.
 
-We will need helpers to mock touch events so that can simulate what the component considers a touch "swipe". These are a few simple helpers to aid with this.
+With the addition of some helper functions to mock touch events we can more smoothly simulate what the component considers a touch "swipe". These are a few simple helpers to aid with this.
 
 <script src="https://gist.github.com/hartzis/8d5d98ebc8e31acfccbe5988a90f7975.js"></script>
 
@@ -40,7 +40,9 @@ We will need helpers to mock touch events so that can simulate what the componen
 
 We now have our component created along with some general helper functions and can now setup our tests.
 
-First we can just test that the component "renders". Then start to test some of the functionality: state is update and prop callback called appropriately.
+First we can just test that the component "renders". Then start to test some of the functionality:
+* state is updated - tested via checking text output
+* prop callback called appropriately - tested via `jest.fn()` spies
 
 <script src="https://gist.github.com/hartzis/25229842d3802a0c9fe62c3241a71567.js"></script>
 
