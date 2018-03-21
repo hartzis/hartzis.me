@@ -37,5 +37,5 @@ export default class Aside extends Component {
 }
 
 Aside.defaultProps = {
-  gravatarSrc: `http://www.gravatar.com/avatar/6c1be341cc1cf3bf3f4f849d0eb282b4.png?s=120`,
+  gravatarSrc: `http://www.gravatar.com/avatar/6c1be341cc1cf3bf3f4f849d0eb282b4.png?s=150`,
 }
