@@ -15,6 +15,7 @@ slug: open-source-maintainer
 * help others understand what is happening under the hood
 * reference versions
 * reference code
+* how being a maintainer of a package that is dependent on another package will help you stay informed with changes and updates to the dependant package. for example with react-swipeable when react comes out with changes to existing methods sometimes users will just make PRs to react-swipeable to make it compatable with the changes!
 
 what to do a better:
 * getting word out( promote project - https://github.com/chrisbolin/offline-talk/blob/master/src/slides.js#L73)
