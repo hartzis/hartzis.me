@@ -16,6 +16,10 @@ function Codepen() {
   return <svg className="icon" viewBox="0 0 512 512"><path d="M427 201.9c-0.6-4.2-2.9-8-6.4-10.3L264.2 87.3c-4.9-3.3-11.4-3.3-16.3 0L91.4 191.6c-4 2.7-6.5 7.4-6.5 12.2v104.3c0 4.8 2.5 9.6 6.5 12.2l156.4 104.3c4.9 3.3 11.4 3.3 16.3 0L420.6 320.4c4-2.6 6.6-7.4 6.6-12.2V203.9C427.1 203.2 427.1 202.6 427 201.9 427 201.7 427.1 202.6 427 201.9zM270.7 127.1l115.2 76.8 -51.5 34.4 -63.8-42.7V127.1zM241.3 127.1v68.6l-63.8 42.7 -51.5-34.4L241.3 127.1zM114.3 231.4l36.8 24.6 -36.8 24.6V231.4zM241.3 384.9L126.1 308.1l51.5-34.4 63.8 42.6V384.9zM256 290.8l-52-34.8 52-34.8 52 34.8L256 290.8zM270.7 384.9V316.3l63.8-42.6 51.5 34.4L270.7 384.9zM397.7 280.6l-36.8-24.6 36.8-24.6V280.6z"/></svg>
 }
 
+function CodeSandbox() {
+  return <svg role="presentation" className="icon" viewBox="0 0 1024 1024"><g><polyline points="719.001,851 719.001,639.848 902,533.802 902,745.267 719.001,851"></polyline><polyline points="302.082,643.438 122.167,539.135 122.167,747.741 302.082,852.573 302.082,643.438"></polyline><polyline points="511.982,275.795 694.939,169.633 512.06,63 328.436,169.987 511.982,275.795"></polyline></g><g><polyline fill="none" stroke="#aaaaaa" strokeWidth="80" strokeMiterlimit="10" points="899,287.833 509,513 509,963"></polyline><line fill="none" stroke="#aaaaaa" strokeWidth="80" strokeMiterlimit="10" x1="122.167" y1="289" x2="511.5" y2="513"></line><polygon fill="none" stroke="#aaaaaa" strokeWidth="80" strokeMiterlimit="10" points="121,739.083 510.917,963.042 901,738.333 901,288 511,62 121,289"></polygon></g></svg>
+}
+
 export default class Aside extends Component {
   render () {
     return (
@@ -26,9 +30,10 @@ export default class Aside extends Component {
         <div className="social">
           <div><a href='/about/'>about&nbsp;me</a></div>
           <div><a href='/posts/'>all&nbsp;posts</a></div>
-          <div><a href='http://github.com/hartzis'><Github/><span className="linkText">github</span></a></div>
-          <div><a href='http://twitter.com/hartzis'><Twitter/><span className="linkText">twitter</span></a></div>
-          <div><a href='http://codepen.io/hartzis'><Codepen/><span className="linkText">codepen</span></a></div>
+          <div><a target="_blank" rel="noopener noreferrer" href='http://github.com/hartzis'><Github/><span className="linkText">github</span></a></div>
+          <div><a target="_blank" rel="noopener noreferrer" href='https://codesandbox.io/u/hartzis'><CodeSandbox/><span className="linkText">codesandbox</span></a></div>
+          <div><a target="_blank" rel="noopener noreferrer" href='http://twitter.com/hartzis'><Twitter/><span className="linkText">twitter</span></a></div>
+          <div><a target="_blank" rel="noopener noreferrer" href='http://codepen.io/hartzis'><Codepen/><span className="linkText">codepen</span></a></div>
           <div><a href='mailto:brianhartz@gmail.com'><Email/><span className="linkText">email</span></a></div>
         </div>
       </aside>
