@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "hjs-dev-server",
-    "build": "webpack && cp -r assets public && cp CNAME public",
+    "build": "webpack && cp -r assets public",
     "getdata": "node ./node_modules/babel-cli/lib/babel-node.js lib/extract-data"
   },
   "author": "Henrik Joreteg <henrik@joreteg.com>",
